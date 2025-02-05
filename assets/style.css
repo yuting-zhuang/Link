@@ -30,3 +30,9 @@ body{
 	border-radius: 50%;
 }
 
+.tab-text{
+	font-size: 14px;
+	line-height: 1.2;
+	white-space: nowrap;
+}
+
