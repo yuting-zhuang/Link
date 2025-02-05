@@ -65,3 +65,22 @@ body{
 .single-item{
 	width: 175px;
 }
+
+.tv-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+	height: 100vh;
+}
+
+.tv{
+	width: 700px;
+	height: 400px;
+	background-color: #d1d1d1;
+	border: 12px solid #3B3B3B;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
