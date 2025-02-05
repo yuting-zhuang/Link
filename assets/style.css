@@ -36,3 +36,14 @@ body{
 	white-space: nowrap;
 }
 
+.menu{
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.menu-row{
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+}
