@@ -8,6 +8,7 @@ body{
 	width: 220px;
 	height: 100vh;
 	background-color: #3B3B3B;
+	color: white;
 	padding-top: 30px;
 	display: flex;
 	flex-direction: column;
@@ -55,5 +56,11 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	color: #3B3B3B;
 	font-size: 14px;
+	
+}
+
+.single-item{
+	width: 175px;
 }
