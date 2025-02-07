@@ -34,6 +34,7 @@ let renderBlock = (block) => {
 	let channelBlocks = document.querySelector('#channel-blocks')
 
 	// Links!
+	// Links!
 	if (block.class == 'Link') {
 		let linkItem =
 			`
@@ -54,14 +55,30 @@ let renderBlock = (block) => {
 
 	// Images!
 	else if (block.class == 'Image') {
-		// …up to you!
+		let imageItem =
+		`
+		<li>
+			<p><em>Image</em></p>
+			<picture>
+				<img src="${ block.image.original.url }">
+			</picture>
+			<p>${ block.title }</p>
+			${ block.description_html }
+		</li>
+		`
+	channelBlocks.insertAdjacentHTML('beforeend', imageItem)
 	}
 
 	// Text!
 	else if (block.class == 'Text') {
-		// …up to you!
-	}
-
+		let imageItem =
+		`
+		<li>
+			<p><em>Image</em></p>
+			<p>${ block.title }</p>
+			${ block.description_html }
+		</li>
+		`
 	// Uploaded (not linked) media…
 	else if (block.class == 'Attachment') {
 		let attachment = block.attachment.content_type // Save us some repetition
