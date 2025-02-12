@@ -79,7 +79,7 @@ let renderBlock = (block) => {
 			let videoItem =
 				`
 				<li>
-					<p><em>Video</em></p>
+					
 					<video controls src="${ block.attachment.url }"></video>
 				</li>
 				`
@@ -99,7 +99,7 @@ let renderBlock = (block) => {
 			let audioItem =
 				`
 				<li>
-					<p><em>Audio</em></p>
+					
 					<audio controls src="${ block.attachment.url }"></video>
 				</li>
 				`
@@ -118,7 +118,7 @@ let renderBlock = (block) => {
 			let linkedVideoItem =
 				`
 				<li>
-					<p><em>Linked Video</em></p>
+					
 					${ block.embed.html }
 				</li>
 				`
