@@ -18,7 +18,6 @@ let placeChannelInfo = (data) => {
 	let channelDescription = document.querySelector('#channel-description')
 	let channelCount = document.querySelector('#channel-count')
 	let channelLink = document.querySelector('#channel-link')
-	// let channelAudio= document.querySelector('#audio-item')
 
 	// Then set their content/attributes to our data:
 	channelTitle.innerHTML = data.title
@@ -33,10 +32,7 @@ let placeChannelInfo = (data) => {
 let renderBlock = (block) => {
 	// To start, a shared `ul` where we’ll insert all our blocks
 	let channelBlocks = document.querySelector('#channel-blocks')
-	let channelAudio= document.querySelector('#audio-item')
 
-
-	// Links!
 	// Links!
 	if (block.class == 'Link') {
 		let linkItem =
@@ -58,30 +54,14 @@ let renderBlock = (block) => {
 
 	// Images!
 	else if (block.class == 'Image') {
-		let imageItem =
-		`
-		<li>
-			<p><em>Image</em></p>
-			<picture>
-				<img src="${ block.image.original.url }">
-			</picture>
-			<p>${ block.title }</p>
-			${ block.description_html }
-		</li>
-		`
-	channelBlocks.insertAdjacentHTML('beforeend', imageItem)
+		// …up to you!
 	}
 
 	// Text!
 	else if (block.class == 'Text') {
-		let imageItem =
-		`
-		<li>
-			<p><em>Image</em></p>
-			<p>${ block.title }</p>
-			${ block.description_html }
-		</li>
-		`
+		// …up to you!
+	}
+
 	// Uploaded (not linked) media…
 	else if (block.class == 'Attachment') {
 		let attachment = block.attachment.content_type // Save us some repetition
@@ -116,7 +96,7 @@ let renderBlock = (block) => {
 					<audio controls src="${ block.attachment.url }"></video>
 				</li>
 				`
-			channelAudio.insertAdjacentHTML('beforeend', audioItem)
+			channelBlocks.insertAdjacentHTML('beforeend', audioItem)
 			// More on audio: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
 		}
 	}
