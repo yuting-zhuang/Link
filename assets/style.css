@@ -1,3 +1,19 @@
+#channel-description{
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 20px;
+}
+#channel-title{
+	font-size: 40px;
+	display: none;
+}
+#channel-blocks{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 3px;
+}
+
+
+
 body{
 	display: flex;
 	margin: 0;
