@@ -13,13 +13,19 @@
 	gap: 3px;
 }
 
-#channel-blocks img, video, link{
+#channel-blocks img, video, link, audio{
 	display: block;
 	width: 300px;
 	height: 300px;
 	object-fit: cover;
 	overflow: hidden;
 }
+
+
+/* #background{
+	background-image: url("Noise.gif");
+	background-size: cover;
+} */
 
 @media(min-width: 1200px){
 	#channel-description{
@@ -37,7 +43,7 @@
 		gap: 3px;
 	}
 	
-	#channel-blocks img, video, Link, audio{
+	#channel-blocks video, Link, audio{
 		display: block;
 		width: 30px;
 		height: 30px;
@@ -46,6 +52,25 @@
 		
 		padding: 0;
 		margin: 0;
+	}
+
+	#channel-blocks img{
+		display: block;
+		/* width: 40px;
+		height: 90px; */
+		object-fit: cover;
+		overflow: hidden;
+	}
+
+	
+	section:nth-child(even) img {
+		width: 40px;
+		height: 90px;
+	}
+
+	section:nth-child(odd) img {
+		width: 80px;
+		height: 50px;
 	}
 }
 
