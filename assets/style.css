@@ -39,7 +39,8 @@ h1{
 	#channel-description{
 		font-family: 'Courier New', Courier, monospace;
 		font-size: 20px;
-		margin: 200px 600px 200px 600px;
+		margin: 200px 0px 200px 40%;
+		max-width: 400px;
 	}
 	#channel-title{
 		display: none;
