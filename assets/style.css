@@ -37,12 +37,15 @@
 		gap: 3px;
 	}
 	
-	#channel-blocks img, video, link{
+	#channel-blocks img, video, Link, audio{
 		display: block;
-		width: 300px;
-		height: 300px;
+		width: 30px;
+		height: 30px;
 		object-fit: cover;
 		overflow: hidden;
+		
+		padding: 0;
+		margin: 0;
 	}
 }
 
