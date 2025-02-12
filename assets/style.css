@@ -9,7 +9,7 @@
 
 #channel-blocks{
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr;
 	gap: 3px;
 }
 
@@ -17,12 +17,38 @@
 	display: block;
 	width: 300px;
 	height: 300px;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+@media(min-width: 1200px){
+	#channel-description{
+		font-family: 'Courier New', Courier, monospace;
+		font-size: 20px;
+	}
+	#channel-title{
+		font-size: 40px;
+		display: none;
+	}
 	
+	#channel-blocks{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: 3px;
+	}
+	
+	#channel-blocks img, video, link{
+		display: block;
+		width: 300px;
+		height: 300px;
+		object-fit: cover;
+		overflow: hidden;
+	}
 }
 
 
 
-body{
+/* body{
 	display: flex;
 	margin: 0;
 	font-family: "Inter";
@@ -129,4 +155,4 @@ body{
 .green{background-color: #75CA3D; width: 70%;}
 .blue{background-color: #3D84CA; width: 90%;}
 .darkblue{background-color: #344083; width: 60%;}
-.black{background-color: #2C2C2C; width: 95%;}
+.black{background-color: #2C2C2C; width: 95%;} */
