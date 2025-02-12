@@ -45,7 +45,7 @@ let renderBlock = (block) => {
 					<img src="${ block.image.original.url }">
 				</picture>
 				
-				${ block.description_html }
+				
 				
 			</li>
 			`
