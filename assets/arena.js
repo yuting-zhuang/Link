@@ -38,15 +38,7 @@ let renderBlock = (block) => {
 		let linkItem =
 			`
 			<li>
-				
-				<picture>
-					<source media="(max-width: 428px)" srcset="${ block.image.thumb.url }">
-					<source media="(max-width: 640px)" srcset="${ block.image.large.url }">
-					<img src="${ block.image.original.url }">
-				</picture>
-				
-				
-				
+					<img src="${ block.image.original.url }">	
 			</li>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', linkItem)
@@ -56,8 +48,9 @@ let renderBlock = (block) => {
 	else if (block.class == 'Image') {
 		let imageItem = 
 			`
+			<li>
 				<img src="${ block.image.original.url }">
-
+			</li>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', imageItem);
 		
@@ -70,7 +63,7 @@ let renderBlock = (block) => {
 	}
 
 	// Uploaded (not linked) media…
-	else if (block.class == 'Attachment') {
+	else if (block.class == 'video') {
 		let attachment = block.attachment.content_type // Save us some repetition
 
 		// Uploaded videos!
@@ -78,8 +71,8 @@ let renderBlock = (block) => {
 			// …still up to you, but we’ll give you the `video` element:
 			let videoItem =
 				`
-				<li>
-					
+				
+				<li>	
 					<video controls src="${ block.attachment.url }"></video>
 				</li>
 				`
@@ -118,9 +111,9 @@ let renderBlock = (block) => {
 			let linkedVideoItem =
 				`
 				<li>
-					
 					${ block.embed.html }
 				</li>
+		
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
 			// More on iframe: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
@@ -128,6 +121,14 @@ let renderBlock = (block) => {
 
 		// Linked audio!
 		else if (embed.includes('rich')) {
+
+			`
+				<li>
+					${ block.embed.html }
+				</li>
+	
+			`
+
 			// …up to you!
 		}
 	}
