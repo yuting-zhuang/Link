@@ -22,10 +22,7 @@
 	justify-content: center;
 }
 
-#channel-blocks img, 
-#channel-blocks video,
-#channel-blocks link,
-#channel-blocks audio{
+#channel-blocks li{
 	display: block;
 	width: 200px;
 	height: 200px;
@@ -34,13 +31,10 @@
 
 	/* this is pixelated effect*/
 	image-rendering: pixelated;
-	filter: blur(6px);
+	filter: blur(1px);
 }
 
-#channel-blocks img:hover,
-#channel-blocks video:hover,
-#channel-blocks link:hover,
-#channel-blocks audio:hover{
+#channel-blocks li:hover{
 	filter: blur(0);
 	image-rendering: auto;
 }
@@ -66,7 +60,7 @@ h1{
 	z-index: -1;
 	width: 100%;
 	height: 100vh;
-	filter: blur(5px);
+	filter: blur(10px);
 }
 audio{
 	height: 200px;
@@ -130,7 +124,7 @@ audio{
 	}
 
 	  
-	.background-image{
+	/* .background-image{
 	top: 0;
 	left: 0;
 	position: fixed;
@@ -143,7 +137,7 @@ audio{
 	width: 100%;
 	height: 100vh;
 	filter: blur(10px);
-	}
+	} */
 
 }
 
