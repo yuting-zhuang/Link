@@ -63,7 +63,7 @@ let renderBlock = (block) => {
 	}
 
 	// Uploaded (not linked) media…
-	else if (block.class == 'video') {
+	else if (block.class == 'attachment') {
 		let attachment = block.attachment.content_type // Save us some repetition
 
 		// Uploaded videos!
