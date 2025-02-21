@@ -15,8 +15,8 @@
 #channel-blocks{
 	display: grid;
 	grid-template-columns: repeat(4, 100px);
-	padding-top: 10px;
-	padding-bottom: 20px;
+	/* padding-top: 10px;
+	padding-bottom: 20px; */
 	gap: 0;
 
 	justify-content: center;
@@ -24,8 +24,8 @@
 
 #channel-blocks li{
 	display: block;
-	width: 200px;
-	height: 200px;
+	width: 100px;
+	height: 100px;
 	object-fit: cover;
 	overflow: hidden;
 
@@ -89,9 +89,10 @@ audio{
 	#channel-blocks{
 		display: grid;
 		grid-template-columns: repeat(4, 200px);
-		padding-top: 10px;
-		padding-bottom: 20px;
+		/* padding-top: 10px;
+		padding-bottom: 20px; */
 		gap: 0;
+		position: relative;
 
 		justify-content: center;
 	}
@@ -123,6 +124,7 @@ audio{
 		background-color: antiquewhite;
 	}
 
+
 	  
 	/* .background-image{
 	top: 0;
@@ -140,114 +142,3 @@ audio{
 	} */
 
 }
-
-
-
-/* body{
-	display: flex;
-	margin: 0;
-	font-family: "Inter";
-}
-
-.remote-control{
-	width: 220px;
-	height: 100vh;
-	background-color: #3B3B3B;
-	color: white;
-	padding-top: 30px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.tab{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 10px;
-	margin-bottom: 40px;
-	width: 100%;
-}
-
-.circle{
-	width: 50px;
-	height: 50px;
-	background-color: #D9D9D9;
-	border-radius: 50%;
-}
-
-.tab-text{
-	font-size: 14px;
-	line-height: 1.2;
-	white-space: nowrap;
-}
-
-.menu{
-	display: flex;
-	flex-direction: column;
-	gap: 15px;
-}
-
-.menu-row{
-	display: flex;
-	justify-content: center;
-	gap: 15px;
-}
-
-.menu-item{
-	background-color: #D9D9D9;
-	width: 80px;
-	height: 40px;
-	margin-bottom: 30px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: #3B3B3B;
-	font-size: 14px;
-	
-}
-
-.single-item{
-	width: 175px;
-}
-
-.tv-container{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-grow: 1;
-	height: 100vh;
-}
-
-.tv{
-	width: 700px;
-	height: 400px;
-	background-color: #d1d1d1;
-	border: 12px solid #3B3B3B;
-	border-radius: 10px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.screen{
-	width: 90%;
-	height: 85%;
-	background-color: #e0e0e0;
-	display: flex;
-	flex-direction: column;
-	padding: 10px;
-	gap: 8px;
-}
-
-.bar{
-	height: 15px;
-}
-.red{background-color: #D65656; width: 85%;}
-.orange{background-color: #D59440; width: 75%;}
-.gray{background-color: #A7A6A6; width: 100%;}
-.white{background-color: white; width: 90%;}
-.green{background-color: #75CA3D; width: 70%;}
-.blue{background-color: #3D84CA; width: 90%;}
-.darkblue{background-color: #344083; width: 60%;}
-.black{background-color: #2C2C2C; width: 95%;} */

@@ -92,7 +92,6 @@ let renderBlock = (block) => {
 			let audioItem =
 				`
 				<li>
-					
 					<audio controls src="${ block.attachment.url }"></audio>
 				</li>
 				`
@@ -128,7 +127,6 @@ let renderBlock = (block) => {
 				</li>
 	
 			`
-
 			// …up to you!
 		}
 	}
@@ -155,9 +153,10 @@ let renderUser = (user, container) => { // You can have multiple arguments for a
 fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-store' })
 	.then((response) => response.json()) // Return it as JSON data
 	.then((data) => { // Do stuff with the data
+
 		console.log(data) // Always good to check your response!
 		placeChannelInfo(data) // Pass the data to the first function
-
+		
 		// Loop through the `contents` array (list), backwards. Are.na returns them in reverse!
 		data.contents.reverse().forEach((block) => {
 			// console.log(block) // The data for a single block
@@ -169,3 +168,24 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers))
 		renderUser(data.user, channelUsers)
 	})
+
+	// document.addEventListener("DOMContentLoaded", function () {
+	// 	randomizePositions(); 
+	// });
+	
+	// function randomizePositions() {
+	// 	const items = document.querySelectorAll("#channel-blocks li"); 
+	// 	console.log(document.querySelectorAll("#channel-blocks li").length);
+	// 	const viewportWidth = window.innerWidth;
+	// 	const viewportHeight = window.innerHeight;
+
+	// 	console.log('Moving to X: ${randomX}, Y: ${randomY}');
+
+	
+	// 	items.forEach(item => {
+	// 		const randomX = Math.random() * (viewportWidth - item.clientWidth);
+	// 		const randomY = Math.random() * (viewportHeight - item.clientHeight);
+	
+	// 		item.style.transform = 'translate(${randomX}px, ${randomY}px)';
+	// 	});
+	// }
