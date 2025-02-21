@@ -38,6 +38,7 @@ let renderBlock = (block) => {
 		let linkItem =
 			`
 			<li>
+				<div class="blue-link"></div>
 					<img src="${ block.image.original.url }">	
 			</li>
 			`
@@ -49,8 +50,8 @@ let renderBlock = (block) => {
 		let imageItem = 
 			`
 			<li>
-			<div class="greenblock"></div>
-				<img src="${ block.image.original.url }">
+				<div class="green-image"></div>
+					<img src="${ block.image.original.url }">
 			</li>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', imageItem);
@@ -61,11 +62,12 @@ let renderBlock = (block) => {
 	// Text!
 	else if (block.class == 'Text') {
 		let textItem = 
-		`
-		<li class="text-block">
-			${ block.content }
-		</li>
-		`
+			`
+			<li class="text-block">
+				<div class="red-text"></div>
+					${ block.content }
+			</li>
+			`
 		channelBlocks.insertAdjacentHTML('beforeend', textItem);
 		// …up to you!
 	}
@@ -80,9 +82,9 @@ let renderBlock = (block) => {
 			let videoItem =
 				`
 				
-				<li class="greenvideo">	
+			<li>
 					<video controls src="${ block.attachment.url }"></video>
-				</li>
+			</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', videoItem)
 			// More on video, like the `autoplay` attribute:
@@ -100,7 +102,8 @@ let renderBlock = (block) => {
 			let audioItem =
 				`
 				<li>
-					<audio controls src="${ block.attachment.url }"></audio>
+					<div class="yellow-audio"></div>	
+						<audio controls src="${ block.attachment.url }"></audio>
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', audioItem)
@@ -118,7 +121,8 @@ let renderBlock = (block) => {
 			let linkedVideoItem =
 				`
 				<li>
-					${ block.embed.html }
+					<div class="black-video"></div>	
+						${ block.embed.html }
 				</li>
 		
 				`

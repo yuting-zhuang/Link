@@ -30,7 +30,7 @@
 	overflow: hidden;
 }
 
-.greenblock{
+.green-image{
   display: block;
   width: 200px;
   height: 200px;
@@ -38,10 +38,64 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(255, 6, 6);
+  background-color: rgb(48, 237, 54);
   z-index: 11;
   cursor: pointer;
 }
+
+.red-text{
+	display: block;
+	width: 200px;
+	height: 200px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgb(237, 73, 48);
+	z-index: 11;
+	cursor: pointer;
+}
+
+.blue-link{
+	display: block;
+	width: 200px;
+	height: 200px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgb(48, 64, 237);
+	z-index: 11;
+	cursor: pointer;
+}
+
+.black-video{
+	display: block;
+	width: 200px;
+	height: 200px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgb(48, 49, 52);
+	z-index: 11;
+	cursor: pointer;
+}
+
+.yellow-audio{
+	display: block;
+	width: 200px;
+	height: 200px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgb(235, 230, 70);
+	z-index: 11;
+	cursor: pointer;
+}
+
+
 
 h1{
 	font-family: 'Courier New', Courier, monospace;
