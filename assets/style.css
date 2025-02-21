@@ -67,6 +67,11 @@ audio{
 	width: 200px;
 }
 
+.text-block{
+	padding: 10px;
+	background-color: white;
+}
+
 @media(min-width: 1200px){
 	audio{
 		height: 200px;
