@@ -24,10 +24,23 @@
 
 #channel-blocks li{
 	display: block;
-	width: 30px;
-	height: 30px;
+	width: 200px;
+	height: 200px;
 	object-fit: cover;
 	overflow: hidden;
+}
+
+.greenblock{
+  display: block;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(255, 6, 6);
+  z-index: 11;
+  cursor: pointer;
 }
 
 h1{
@@ -91,8 +104,8 @@ audio{
 	
 	#channel-blocks li{
 		display: block;
-		width: 30px;
-		height: 30px;
+		width: 200px;
+		height: 200px;
 		object-fit: cover;
 		overflow: hidden;
 	}

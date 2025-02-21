@@ -49,6 +49,7 @@ let renderBlock = (block) => {
 		let imageItem = 
 			`
 			<li>
+			<div class="greenblock"></div>
 				<img src="${ block.image.original.url }">
 			</li>
 			`
@@ -79,7 +80,7 @@ let renderBlock = (block) => {
 			let videoItem =
 				`
 				
-				<li>	
+				<li class="greenvideo">	
 					<video controls src="${ block.attachment.url }"></video>
 				</li>
 				`
