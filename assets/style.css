@@ -24,16 +24,16 @@
 
 #channel-blocks li{
 	display: block;
-	width: 200px;
-	height: 200px;
+	width: 20px;
+	height: 20px;
 	object-fit: cover;
 	overflow: hidden;
 }
 
 .green-image{
   display: block;
-  width: 200px;
-  height: 200px;
+  width: 20px;
+  height: 20px;
   top: 0;
   left: 0;
   right: 0;
@@ -45,8 +45,8 @@
 
 .red-text{
 	display: block;
-	width: 200px;
-	height: 200px;
+	width: 20px;
+	height: 20px;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -58,8 +58,8 @@
 
 .blue-link{
 	display: block;
-	width: 200px;
-	height: 200px;
+	width: 20px;
+	height: 20px;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -71,8 +71,8 @@
 
 .black-video{
 	display: block;
-	width: 200px;
-	height: 200px;
+	width: 20px;
+	height: 20px;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -84,8 +84,8 @@
 
 .yellow-audio{
 	display: block;
-	width: 200px;
-	height: 200px;
+	width: 20px;
+	height: 20px;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -126,7 +126,6 @@ audio{
 }
 
 .text-block{
-	padding: 10px;
 	background-color: white;
 }
 
@@ -158,11 +157,11 @@ audio{
 	
 	#channel-blocks li{
 		display: block;
-		width: 200px;
-		height: 200px;
+		width: 20px;
+		height: 20px;
 		object-fit: cover;
 		overflow: hidden;
-	}
+	}	
 
 
 	h1{
