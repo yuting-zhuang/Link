@@ -59,13 +59,12 @@ let renderBlock = (block) => {
 
 	// Text!
 	else if (block.class == 'Text') {
-
 		let textItem = 
-			`
-			<li>
-				<img src="${ block.image.original.url }">
-			</li>
-			`
+		`
+		<li>
+			<text src="${ block.image.original.url }"></text>
+		</li>
+		`
 		channelBlocks.insertAdjacentHTML('beforeend', textItem);
 		// …up to you!
 	}
