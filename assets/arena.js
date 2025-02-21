@@ -59,6 +59,8 @@ let renderBlock = (block) => {
 
 	// Text!
 	else if (block.class == 'Text') {
+		
+
 		// …up to you!
 	}
 
