@@ -167,6 +167,10 @@ audio{
 		overflow: hidden;
 	}
 
+	.mainconcept{
+		max-width: 1000px;
+	}
+
 
 	h1{
 		font-family: 'Courier New', Courier, monospace;

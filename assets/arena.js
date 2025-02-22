@@ -199,10 +199,9 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 	
 		items.forEach(item => {
 			const randomX = Math.random() * (viewportWidth - item.clientWidth);
-			const randomY = Math.random() * (viewportHeight - item.clientHeight);
 	
-			item.style.transform = `translate(${randomX}px, ${randomY}px)`;
-			console.log(`Moving to X: ${randomX}, Y: ${randomY}, ${item.style.transform}`);
+			item.style.transform = `translateX(${randomX}px)`;
+			console.log(`Moving to X: ${randomX}, ${item.style.transform}`);
 		});
 	}
 
