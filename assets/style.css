@@ -13,13 +13,14 @@
 }
 
 #channel-blocks{
+	position: relative;
 	display: grid;
 	grid-template-columns: repeat(4, 100px);
 	/* padding-top: 10px;
 	padding-bottom: 20px; */
 	gap: 40px;
 
-	/* justify-content: center; */
+	justify-content: center;
 }
 
 #channel-blocks li{
@@ -147,24 +148,24 @@ audio{
 	}
 	
 	#channel-blocks{
+		position: relative;
 		display: grid;
 		grid-template-columns: repeat(5, 200px);
 		/* padding-top: 10px;
 		padding-bottom: 20px; */
 		gap: 40px;
-		position: relative;
 
-		justify-content: center;
+		/* justify-content: center; */
 	}
 	
+	/* randomize this in order */
 	#channel-blocks li{
 		display: block;
 		width: 20px;
 		height: 20px;
 		object-fit: cover;
 		overflow: hidden;
-		/* margin-left: 20px; randomize this in order */
-	}	
+	}
 
 
 	h1{
