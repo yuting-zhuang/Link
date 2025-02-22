@@ -189,65 +189,33 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 	});
 	
 	function randomizePositions() {
+
 		let items = document.querySelectorAll("#channel-blocks li"); 
-		console.log(document.querySelectorAll("#channel-blocks li").length);
 		const viewportWidth = window.innerWidth;
-		const viewportHeight = window.innerHeight;
+
+		items.forEach(item => {
+			const rect = item.getBoundingClientRect();
+			const originalX = rect.left;
+			const randomOffset = Math.random() * 180;
+			const newX = originalX + randomOffset;
+
+			item.style.transform = `translateX(${newX}px)`;
+			console.log(`Moving to X: ${randomOffset}, ${item.style.transform}`);
+		})
+
+		// let items = document.querySelectorAll("#channel-blocks li"); 
+		// console.log(document.querySelectorAll("#channel-blocks li").length);
+		// const viewportWidth = window.innerWidth;
+		// const viewportHeight = window.innerHeight;
 
 		
 
 	
-		items.forEach(item => {
-			const randomX = Math.random() * (viewportWidth - item.clientWidth);
+		// items.forEach(item => {
+		// 	const randomX = Math.random() * (viewportWidth - item.clientWidth);
 	
-			item.style.transform = `translateX(${randomX}px)`;
-			console.log(`Moving to X: ${randomX}, ${item.style.transform}`);
-		});
+		// 	item.style.transform = `translateX(${randomX}px)`;
+		// 	console.log(`Moving to X: ${randomX}, ${item.style.transform}`);
+		// });
 	}
 
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     randomizePositions();
-// });
-
-// function randomizePositions() {
-//     const items = document.querySelectorAll("#channel-blocks li");
-//     const viewportWidth = window.innerWidth;
-//     const viewportHeight = window.innerHeight;
-
-//     items.forEach(item => {
-//         const randomX = Math.random() * (viewportWidth - item.clientWidth);
-//         const randomY = Math.random() * (viewportHeight - item.clientHeight);
-        
-//         // Fix: Use proper template literal syntax
-//         item.style.transform = `translate(${randomX}px, ${randomY}px)`;
-        
-//         // Add transition for smooth movement (optional)
-//         item.style.transition = 'transform 0.5s ease';
-//     });
-// }
-
-
-
-
-	
-	// function to shuffle the order of squares:
-// document.addEventListener("DOMContentLoaded", function () {
-// 	randomizePositions(); 
-//   });
-  
-//   function randomizePositions() {
-// 	let items = document.querySelectorAll("#channel-blocks li"); 
-// 	console.log(`Total squares: ${items.length}`);
-// 	const viewportWidth = window.innerWidth;
-// 	const viewportHeight = window.innerHeight;
-  
-// 	items.forEach(item => {
-// 	  const randomX = Math.random() * (viewportWidth - item.clientWidth);
-// 	  const randomY = Math.random() * (viewportHeight - item.clientHeight);
-  
-// 	  console.log(`Moving to X: ${randomX}, Y: ${randomY}`);
-  
-// 	  item.style.transform = `translate(${randomX}px, ${randomY}px)`;
-// 	});
-//   }
