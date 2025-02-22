@@ -181,23 +181,27 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		renderUser(data.user, channelUsers)
 	})
 
-	// document.addEventListener("DOMContentLoaded", function () {
-	// 	randomizePositions(); 
-	// });
-	
-	// function randomizePositions() {
-	// 	const items = document.querySelectorAll("#channel-blocks li"); 
-	// 	console.log(document.querySelectorAll("#channel-blocks li").length);
-	// 	const viewportWidth = window.innerWidth;
-	// 	const viewportHeight = window.innerHeight;
-
-	// 	console.log('Moving to X: ${randomX}, Y: ${randomY}');
 
 	
-	// 	items.forEach(item => {
-	// 		const randomX = Math.random() * (viewportWidth - item.clientWidth);
-	// 		const randomY = Math.random() * (viewportHeight - item.clientHeight);
+	// function to shuffle the order of squares:
+
+	document.addEventListener("DOMContentLoaded", function () {
+		randomizePositions(); 
+	});
 	
-	// 		item.style.transform = 'translate(${randomX}px, ${randomY}px)';
-	// 	});
-	// }
+	function randomizePositions() {
+		let items = document.querySelectorAll("#channel-blocks li"); 
+		console.log(document.querySelectorAll("#channel-blocks li").length);
+		const viewportWidth = window.innerWidth;
+		const viewportHeight = window.innerHeight;
+
+		console.log('Moving to X: ${randomX}, Y: ${randomY}');
+
+	
+		items.forEach(item => {
+			const randomX = Math.random() * (viewportWidth - item.clientWidth);
+			const randomY = Math.random() * (viewportHeight - item.clientHeight);
+	
+			item.style.transform = 'translate(${randomX}px, ${randomY}px)';
+		});
+	}

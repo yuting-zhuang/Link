@@ -19,7 +19,7 @@
 	padding-bottom: 20px; */
 	gap: 40px;
 
-	justify-content: center;
+	/* justify-content: center; */
 }
 
 #channel-blocks li{
@@ -30,18 +30,20 @@
 	overflow: hidden;
 }
 
+
+/*give objects a colored cover*/
 .green-image{
-  display: block;
-  width: 20px;
-  height: 20px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgb(48, 237, 54);
-  z-index: 11;
-  cursor: pointer;
-}
+	display: block;
+	width: 20px;
+	height: 20px;
+	top: 0;
+	left: 0;
+	right: 20px;
+	bottom: 0;
+	background-color: rgb(48, 237, 54);
+	z-index: 11;
+	cursor: pointer;
+	}
 
 .red-text{
 	display: block;
@@ -161,6 +163,7 @@ audio{
 		height: 20px;
 		object-fit: cover;
 		overflow: hidden;
+		/* margin-left: 20px; randomize this in order */
 	}	
 
 
