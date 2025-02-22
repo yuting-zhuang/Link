@@ -189,19 +189,14 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 	});
 	
 	function randomizePositions() {
-
-		let items = document.querySelectorAll("#channel-blocks li"); 
-		const viewportWidth = window.innerWidth;
-
+		const items = document.querySelectorAll("#channel-blocks li");
+	
 		items.forEach(item => {
-			const rect = item.getBoundingClientRect();
-			const originalX = rect.left;
+			// Generate a random offset of 0~180px directly within the grid
 			const randomOffset = Math.random() * 180;
-			const newX = originalX + randomOffset;
-
-			item.style.transform = `translateX(${newX}px)`;
-			console.log(`Moving to X: ${randomOffset}, ${item.style.transform}`);
-		})
+			item.style.transform = `translateX(${randomOffset}px)`;
+		});
+	
 
 		// let items = document.querySelectorAll("#channel-blocks li"); 
 		// console.log(document.querySelectorAll("#channel-blocks li").length);
