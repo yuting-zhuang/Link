@@ -49,7 +49,7 @@ let renderBlock = (block) => {
 	else if (block.class == 'Image') {
 		let imageItem = 
 			`
-			<li>
+			<li class="Image">
 				<div class="green-image"></div>
 					<img src="${ block.image.original.url }">
 			</li>
@@ -101,7 +101,7 @@ let renderBlock = (block) => {
 			// …still up to you, but here’s an `audio` element:
 			let audioItem =
 				`
-				<li>
+				<li class="audio">
 					<div class="yellow-audio"></div>	
 						<audio controls src="${ block.attachment.url }"></audio>
 				</li>
@@ -120,7 +120,7 @@ let renderBlock = (block) => {
 			// …still up to you, but here’s an example `iframe` element:
 			let linkedVideoItem =
 				`
-				<li>
+				<li class="video">
 					<div class="black-video"></div>	
 						${ block.embed.html }
 				</li>
@@ -178,16 +178,14 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		// Also display the owner and collaborators:
 		let channelUsers = document.querySelector('#channel-users') // Show them together
 		data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers))
-		renderUser(data.user, channelUsers)
+		renderUser(data.user, channelUsers);
+		randomizePositions(); 
+		startGlitch();
 	})
 
 
 
 	// function to shuffle the order of squares:
-	document.addEventListener("DOMContentLoaded", function () {
-		setTimeout(randomizePositions, 500); // 100 milliseconds = 0.1 seconds
-	});
-	
 	function randomizePositions() {
 		const items = document.querySelectorAll("#channel-blocks li");
 	
@@ -196,5 +194,29 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 			const randomOffset = Math.random() * 180;
 			item.style.transform = `translateX(${randomOffset}px)`;
 		});
+	}
+
+
+	let glitchTimeout;
+
+	function activateGlitch() {
+		const overlay = document.getElementById('glitch-overlay');
+		overlay.classList.add('active');
+
+		// disapear in 1s
+		setTimeout(() => {
+			overlay.classList.remove('active');
+		}, 1000);
+
+		// click to stop the animation, refresh the page to get it back
+		overlay.addEventListener('click', () => {
+			overlay.classList.remove('active');
+			clearTimeout(glitchTimeout);
+		}, { once: true });
+	}
+
+	// Trigger every 10 seconds
+	function startGlitch() {
+		glitchTimeout = setInterval(activateGlitch, 20000);
 	}
 
