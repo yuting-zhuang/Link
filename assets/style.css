@@ -32,7 +32,7 @@
 }
 
 
-/*give objects a colored cover*/
+/*Give each category a foreground color*/
 .green-image{
 	display: block;
 	width: 20px;

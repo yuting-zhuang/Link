@@ -196,21 +196,5 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 			const randomOffset = Math.random() * 180;
 			item.style.transform = `translateX(${randomOffset}px)`;
 		});
-	
-
-		// let items = document.querySelectorAll("#channel-blocks li"); 
-		// console.log(document.querySelectorAll("#channel-blocks li").length);
-		// const viewportWidth = window.innerWidth;
-		// const viewportHeight = window.innerHeight;
-
-		
-
-	
-		// items.forEach(item => {
-		// 	const randomX = Math.random() * (viewportWidth - item.clientWidth);
-	
-		// 	item.style.transform = `translateX(${randomX}px)`;
-		// 	console.log(`Moving to X: ${randomX}, ${item.style.transform}`);
-		// });
 	}
 
