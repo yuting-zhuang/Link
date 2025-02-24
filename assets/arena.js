@@ -37,9 +37,11 @@ let renderBlock = (block) => {
 	if (block.class == 'Link') {
 		let linkItem =
 			`
-			<li>
+			<li class="Link-block">
 				<div class="blue-link"></div>
+				<div class="Link-content">
 					<img src="${ block.image.original.url }">	
+				<div>
 			</li>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', linkItem)
@@ -49,9 +51,11 @@ let renderBlock = (block) => {
 	else if (block.class == 'Image') {
 		let imageItem = 
 			`
-			<li class="Image">
+			<li class="Image-block">
 				<div class="green-image"></div>
+				<div class="Image-content">
 					<img src="${ block.image.original.url }">
+				</div>
 			</li>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', imageItem);
@@ -63,9 +67,11 @@ let renderBlock = (block) => {
 	else if (block.class == 'Text') {
 		let textItem = 
 			`
-			<li class="text-block">
+			<li class="Text-block">
 				<div class="red-text"></div>
+				<div class="Text-content">
 					${ block.content }
+				</div>
 			</li>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', textItem);
@@ -101,9 +107,11 @@ let renderBlock = (block) => {
 			// …still up to you, but here’s an `audio` element:
 			let audioItem =
 				`
-				<li class="audio">
-					<div class="yellow-audio"></div>	
+				<li class="audio-block">
+					<div class="yellow-audio"></div>
+					<div class="audio-content">
 						<audio controls src="${ block.attachment.url }"></audio>
+					</div>
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', audioItem)
@@ -120,9 +128,11 @@ let renderBlock = (block) => {
 			// …still up to you, but here’s an example `iframe` element:
 			let linkedVideoItem =
 				`
-				<li class="video">
-					<div class="black-video"></div>	
+				<li class="video-block">
+					<div class="black-video"></div>
+					<div class="video-content">
 						${ block.embed.html }
+					</div>
 				</li>
 		
 				`
@@ -180,7 +190,7 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers))
 		renderUser(data.user, channelUsers);
 		randomizePositions(); 
-		startGlitch();
+		// startGlitch();
 	})
 
 
@@ -197,26 +207,58 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 	}
 
 
-	let glitchTimeout;
 
-	function activateGlitch() {
-		const overlay = document.getElementById('glitch-overlay');
-		overlay.classList.add('active');
 
-		// disapear in 1s
-		setTimeout(() => {
-			overlay.classList.remove('active');
-		}, 1000);
+	// Add Onclick function
+	let currentImageContent = null;
+	let images = document.querySelectorAll("li.Image");
+	
+	images.forEach((image) => {
+	  image.addEventListener("click", () => {
+		let content = image.querySelector(".Image-content");
+	
+		if (currentImageContent && currentImageContent !== content) {
+		  currentImageContent.classList.remove("clicked");
+		}
+	
+		content.classList.toggle("clicked");
+		currentImageContent = content;
 
-		// click to stop the animation, refresh the page to get it back
-		overlay.addEventListener('click', () => {
-			overlay.classList.remove('active');
-			clearTimeout(glitchTimeout);
-		}, { once: true });
-	}
+		event.stopPropagation(); // Prevent event propagation to parent elements
+	  });
+	});
+	
+	document.body.addEventListener("click", () => {
+	  closeImageContent();
+	});
+	
+	const closeImageContent = () => {
+	  if (currentImageContent) {
+		currentImageContent.classList.remove("clicked");
+		currentImageContent = null;
+	  }
+	};
 
-	// Trigger every 10 seconds
-	function startGlitch() {
-		glitchTimeout = setInterval(activateGlitch, 20000);
-	}
+	// let glitchTimeout;
+
+	// function activateGlitch() {
+	// 	const overlay = document.getElementById('glitch-overlay');
+	// 	overlay.classList.add('active');
+
+	// 	// disapear in 1s
+	// 	setTimeout(() => {
+	// 		overlay.classList.remove('active');
+	// 	}, 1000);
+
+	// 	// click to stop the animation, refresh the page to get it back
+	// 	overlay.addEventListener('click', () => {
+	// 		overlay.classList.remove('active');
+	// 		clearTimeout(glitchTimeout);
+	// 	}, { once: true });
+	// }
+
+	// // Trigger every 10 seconds
+	// function startGlitch() {
+	// 	glitchTimeout = setInterval(activateGlitch, 20000);
+	// }
 
