@@ -17,14 +17,13 @@
 	display: grid;
 	grid-template-columns: repeat(4, 100px);
 	gap: 40px;
-
-	/* justify-content: center; */
 }
 
 #channel-blocks li{
 	display: block;
 	object-fit: cover;
 	overflow: hidden;
+	position: relative;
 }
 
 /* Modal dialog style */
@@ -94,7 +93,8 @@
 	background-color: rgb(48, 237, 54);
 	z-index: 11;
 	cursor: pointer;
-	}
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
 .red-text{
 	display: block;
@@ -107,6 +107,7 @@
 	background-color: rgb(237, 73, 48);
 	z-index: 11;
 	cursor: pointer;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blue-link{
@@ -120,6 +121,7 @@
 	background-color: rgb(48, 64, 237);
 	z-index: 11;
 	cursor: pointer;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .black-video{
@@ -133,6 +135,7 @@
 	background-color: rgb(48, 49, 52);
 	z-index: 11;
 	cursor: pointer;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .yellow-audio{
@@ -146,6 +149,7 @@
 	background-color: rgb(235, 230, 70);
 	z-index: 11;
 	cursor: pointer;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
@@ -200,6 +204,11 @@ audio{
 
 @media(min-width: 1200px){
 
+	audio{
+		height: 30px;
+		width: 30px;
+	}
+
 	#channel-description{
 		font-family: 'Courier New', Courier, monospace;
 		font-size: 20px;
@@ -224,8 +233,6 @@ audio{
 	/* randomize this order */
 	#channel-blocks li{
 		display: block;
-		/* width: 20px;
-		height: 20px; */
 		object-fit: cover;
 		overflow: hidden;
 	}

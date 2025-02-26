@@ -1,3 +1,5 @@
+let blocks = [];
+
 // This allows us to process/render the descriptions, which are in Markdown!
 // More about Markdown: https://en.wikipedia.org/wiki/Markdown
 let markdownIt = document.createElement('script')
@@ -64,7 +66,7 @@ let generateBlockContent = (block) => {
 			`
 			<div class="modal-content-inner text-content">
 				<h3>${block.title || 'Text'}</h3>
-					${block.content_html || block.description_html || block.content ''}
+					${block.content_html || block.description_html || block.content ||''}
 			</div>
 			`
 		// channelBlocks.insertAdjacentHTML('beforeend', textItem);
@@ -106,7 +108,7 @@ let generateBlockContent = (block) => {
 						<audio controls src="${ block.attachment.url }" style="max-width:100%"></audio>
 						${block.description_html || ''}
 				</div>
-				`
+				`;
 			// channelBlocks.insertAdjacentHTML('beforeend', audioItem)
 			// More on audio: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
 		}
@@ -126,7 +128,7 @@ let generateBlockContent = (block) => {
 						${ block.embed.html }
 						${block.description_html || ''}
 				</div>
-				`
+				`;
 			// channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
 			// More on iframe: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
 		}
@@ -182,11 +184,11 @@ let renderBlock = (block) => {
 		}
 
 		else if (block.class == 'Media') {
-			if (block.attachment.content_type.includes('video')) {
+			if (block.embed.type.includes('video')) {
 				colorClass = 'black-video';
 				dataType = 'embed-video';
 				}
-			else if (block.attachment.content_type.includes('rich')) {
+			else if (block.embed.type.includes('rich')) {
 				colorClass = 'yellow-audio';
 				dataType = 'embed-audio';
 				}
@@ -197,7 +199,7 @@ let renderBlock = (block) => {
 			let blockItem = 
 			`
 				<li class="${block.class}-block" data-id="${block.id}">
-					<div class="${colorClass" data-content-type="${dataType}"></div>
+					<div class="${colorClass}" data-content-type="${dataType}"></div>
 				</li>
 			`;
 			channelBlocks.insertAdjacentHTML('beforeend', blockItem);
@@ -296,7 +298,7 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		console.log("fetch:",data) // Always good to check your response!
 		placeChannelInfo(data) // Pass the data to the first function
 
-		blocks = [];
+	blocks = [];
 		
 		// Loop through the `contents` array (list), backwards. Are.na returns them in reverse!
 		data.contents.reverse().forEach((block) => {
