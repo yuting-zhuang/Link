@@ -1,3 +1,7 @@
+main{
+	margin-bottom: 7vh;
+}
+
 #channel-description{
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 15px;
@@ -8,7 +12,22 @@
 	padding: 20px 20px 20px 60px;
 }
 
+#channel-link{
+	padding: 10px;
+	margin-left: 0.5%;
+	background-color: rgb(237, 73, 48);
+	color: white;
+}
+
 #channel-title{
+	display: none;
+}
+
+#channel-users{
+	display: none;
+}
+
+#channel-count{
 	display: none;
 }
 
@@ -299,7 +318,7 @@ audio{
 		max-width: 50%;
 		max-height: 50%;
 	}
-	
+
 
 
 	#modal-content h3 {
