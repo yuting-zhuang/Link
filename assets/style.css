@@ -19,12 +19,12 @@
 	gap: 40px;
 }
 
-#channel-blocks li{
+/* #channel-blocks li{
 	display: block;
 	object-fit: cover;
 	overflow: hidden;
 	position: relative;
-}
+} */
 
 /* Modal dialog style */
 .modal-overlay {
@@ -34,7 +34,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0,0,0,0.5); /*translucent black background*/
+	background-color: rgba(0, 0, 0, 0.5); /*translucent black background*/
 	z-index: 10;
 	justify-content: center;
 	align-items: center;
@@ -78,7 +78,7 @@
 #modal-content h3{
 	margin-top: 0;
 	margin-bottom: 15px;
-	font-size: 20px
+	font-size: 20px;
 }
 
 /*Give each category a foreground color*/
@@ -152,7 +152,11 @@
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
+/*Hover effect for color blocks*/
+.green-image:hover, .red-text:hover, .blue-link:hover, .black-video:hover, .yellow-audio:hover {
+	transform: scale(1.2);
+	box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
 
 h1{
 	font-family: 'Courier New', Courier, monospace;
@@ -162,6 +166,29 @@ h1{
 
 	background-color: antiquewhite;
 }
+
+audio{
+	height: 30px;
+	width: 30px;
+}
+
+.text-block{
+	background-color: white;
+}
+
+/* Styles for description */
+.block-description{
+	margin-top: 15px;
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+.no-description{
+	margin-top: 10px;
+	font-style: italic;
+	color: black;
+}
+
 
 /* .background-image{
 	top: 0;
@@ -177,30 +204,6 @@ h1{
 	height: 100vh;
 	filter: blur(10px);
 } */
-
-
-
-audio{
-	height: 30px;
-	width: 30px;
-}
-
-.text-block{
-	background-color: white;
-}
-
-.block-description{
-	margin-top: 15px;
-	font-size: 14px;
-	line-height: 1.4;
-}
-
-.no-description{
-	margin-top: 10px;
-	font-style: italic;
-	color: black;
-}
-
 
 @media(min-width: 1200px){
 
@@ -231,11 +234,11 @@ audio{
 	
 
 	/* randomize this order */
-	#channel-blocks li{
+	/* #channel-blocks li{
 		display: block;
 		object-fit: cover;
 		overflow: hidden;
-	}
+	} */
 
 	/* align center those squares */
 	.mainconcept{
