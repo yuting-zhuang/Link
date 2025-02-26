@@ -1,6 +1,22 @@
 main{
-	margin-top: 6vh;
+	margin-top: 4vh;
 	/* margin-bottom: 7vh; */
+}
+
+p{
+	font-family: "Roboto";
+	font-size: 15px;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+a{
+	font-family: "Roboto";
+	/* border: 2px solid; */
+	padding: 5px 20px;
+	font-size: 15px;
+	text-align: center;
+	/* border-radius: 3px; */
 }
 
 /*pop up window*/
@@ -55,6 +71,7 @@ main{
 	cursor: pointer;
 	margin-top: 10px;
 	margin-bottom: 20px;
+	font-family: "Sixtyfour";
 }
 
 .popup button:hover {
@@ -64,6 +81,7 @@ main{
 
 
 #channel-description{
+	font-family: "Roboto";
 	font-size: 15px;
 	margin: 20px 0;
 	padding: 10px;
@@ -148,9 +166,11 @@ main{
 }
 
 #modal-content h3{
-	margin-top: 0;
-	margin-bottom: 15px;
-	font-size: 20px;
+	margin-top: 5px;
+	margin-bottom: 18px;
+	font-size: 18px;
+	font-family: "Sixtyfour";
+	text-align: center;
 }
 
 /*Give each category a foreground color*/
@@ -236,9 +256,6 @@ audio{
 	width: 30px;
 }
 
-/* .text-block{
-	background-color: white;
-} */
 
 /* Styles for description */
 .block-description{
