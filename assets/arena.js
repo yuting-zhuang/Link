@@ -85,7 +85,7 @@ let generateBlockContent = (block) => {
 				`
 				<div class="modal-content-inner">
 					<h3>${block.title || 'Video'}</h3>
-						<video controls src="${ block.attachment.url }" style="max-width: 100%></video>
+						<video controls src="${ block.attachment.url }"></video>
 						${block.content_html || ''}
 				</div>
 				`
