@@ -16,17 +16,26 @@ main{
 }
 
 .popup {
-    background: white;
+    background: rgb(38, 38, 197);
     padding: 20px;
     border-radius: 10px;
     width: 400px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+	display: flex;
+    flex-direction: column;
+}
+
+.popup h1, .popup p {
     text-align: center;
-    position: relative;
+    width: 100%;
 }
 
 .popup h1 {
     margin-top: 0;
+    font-size: 30px;
+	background-color: #005EC5;
 }
 
 .popup button {
@@ -43,18 +52,14 @@ main{
     background: #005EC5;
 }
 
-h1{
-	font-size: 30px;
-}
 
 #channel-description{
-	/* font-family: 'Courier New', Courier, monospace; */
-	font-size: 15px;
-	margin: 20px 60px 20px 0;
-	/* max-width: 400px; */
-
-	background-color: antiquewhite;
-	/* padding: 20px 20px 20px 60px; */
+    font-size: 15px;
+    margin: 20px 0;
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
 }
 
 #channel-link{
@@ -69,10 +74,7 @@ h1{
 
 }
 
-#channel-title{
-	font-size: 20px;
-	background-color: #005EC5;
-}
+
 
 #channel-users{
 	display: none;
@@ -232,14 +234,6 @@ h1{
 	box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
-h1{
-	font-family: 'Courier New', Courier, monospace;
-	font-size: 40px;
-	font-weight: 600;
-	margin: 40px 0px 0px 50px;
-
-	background-color: antiquewhite;
-}
 
 audio{
 	height: 30px;
@@ -285,16 +279,6 @@ audio{
 		height: 30px;
 		width: 30px;
 	}
-
-	/* #channel-description{
-		font-size: 20px;
-		background-color: antiquewhite;
-	}
-
-	#channel-title{
-		font-size: 20px;
-		background-color: #005EC5;
-	} */
 	
 	#channel-blocks{
 		position: relative;
