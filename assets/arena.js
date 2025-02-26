@@ -40,6 +40,7 @@ let generateBlockContent = (block) => {
 				<h3>${block.title || 'Link'}</h3>
 					<img src="${ block.image.original.url }" style="max-width: 100%; height: auto;">
 					${block.description_html || ''}
+				<p><a href="${ block.source.url }">The Link ↗</a></p>
 			</div>
 			`
 		// channelBlocks.insertAdjacentHTML('beforeend', linkItem)
@@ -52,7 +53,7 @@ let generateBlockContent = (block) => {
 			`
 			<div class="modal-content-inner">
 				<h3>${block.title || 'Image'}</h3>
-					<img src="${ block.image.original.url }" style="max-width: 100%; height: auto;">
+					<img src="${ block.image.original.url }">
 					${block.description_html || ''}
 			</div>
 			`
@@ -340,5 +341,5 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 
 	// Trigger every 10 seconds
 	function startGlitch() {
-		glitchTimeout = setInterval(activateGlitch, 20000);
+		glitchTimeout = setInterval(activateGlitch, 2000000);
 	}
