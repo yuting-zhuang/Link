@@ -12,22 +12,30 @@
 	</head>
 	<body>
 		<header>
-			<h1 id="channel-title"></h1>
-			<h1>Error as aesthetic</h1>
-			<section id="channel-description"></section>
+			<!-- <h1 id="channel-title"></h1> -->
+			<!-- <section id="channel-description"></section> -->
 			<p><a id="channel-link">Link to my Are.na ↗</a></p>
 		</header>
 
 		<main>
-			<!-- <section class="background">
-				<div class="background-image"></div>
-			</section> -->
+			
+			<div class="popup-overlay" id="popupOverlay">
+				<div class="popup">
+					<h1 id="channel-title"></h1> 
+					<p id="channel-description"></p>
+					<button onclick="closePopup()">Enter</button>
+				</div>
+			</div>
 
 			<section>
 				<!-- <h2>place holder</h2> -->
 				<ul class="center-alignment" id="channel-blocks"></ul>
 				<p><span id="channel-count"></p>
 			</section>
+
+			<!-- <section class="background">
+				<div class="background-image"></div>
+			</section> -->
 		</main>
 		<footer>
 			<!-- <h2>Author name</h2> -->

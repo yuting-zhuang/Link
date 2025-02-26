@@ -281,13 +281,18 @@ function setupModalEvents() {
 
 // function to shuffle the order of squares:
 function randomizePositions() {
-	const items = document.querySelectorAll("#channel-blocks li");
+	const items = document.querySelectorAll("#channel-blocks li:not(.popup)");
 
 	items.forEach(item => {
 		// Generate a random offset of 0~180px directly within the grid
 		const randomOffset = Math.random() * 180;
 		item.style.transform = `translateX(${randomOffset}px)`;
 	});
+}
+
+//pop-up window:
+function closePopup() {
+	document.getElementById('popupOverlay').style.display = 'none';
 }
 
 
@@ -317,8 +322,11 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		// Create and set up modal dialog:
 		createModalOverlay();
 		setupModalEvents();
-	})
 
+		 // **填充弹窗内容**
+		 document.getElementById("channel-title").innerText = data.title;
+		 document.getElementById("channel-description").innerHTML = window.markdownit().render(data.metadata.description);
+	})
 
 
 	let glitchTimeout;
