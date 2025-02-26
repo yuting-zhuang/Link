@@ -421,13 +421,6 @@ audio{
 		display: none;
 	}
 	
-	#channel-blocks{
-		position: relative;
-		display: grid;
-		grid-template-columns: repeat(4, 100px);
-		gap: 40px;
-	}
-	
 	/* Modal dialog style */
 	.modal-overlay {
 		display: none;
@@ -447,38 +440,14 @@ audio{
 	}
 	
 	#modal-content {
-		max-width: 80%;
+		max-width: 70%;
 		max-height: 85vh;
 		overflow-y: auto;
 		background-color: transparent;
 	}
 	
-	.modal-content-inner {
-		background-color: white;
-		padding: 20px;
-		border-radius: 4px;
-		max-width: 100%;
-	
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	
 	.Text-content {
 		max-width: 800px;
-	}
-	
-	#modal-content img{
-		max-width: 100%;
-		height: auto;
-	}
-	
-	#modal-content video{
-		max-width: 100%;
-	}
-	
-	#modal-content audio{
-		width: 100%;
 	}
 	
 	#modal-content h3{
@@ -488,6 +457,28 @@ audio{
 		font-family: "Sixtyfour";
 		text-align: center;
 	}
+
+	#modal-content img{
+		max-height: 65%;
+		max-width: 67%;
+	}
+
+	#modal-content iframe{
+		width: 100%;
+		height: 300px;
+	}
+
+	#modal-content link{
+		max-width: 50%;
+		max-height: 50%;
+	}
+
+
+
+	#modal-content h3 {
+		font-size: 24px;
+	}
+
 	
 	/*Give each category a foreground color*/
 	.green-image{
@@ -599,7 +590,6 @@ audio{
 		gap: 40px;
 	}
 	
-=====
 
 	/* align center those squares */
 	.mainconcept{
@@ -615,11 +605,6 @@ audio{
 	}
 
 
-	/* Modal dialog optimization for laptop screens */
-	#modal-content {
-		max-width: 70%;
-	}
-
 	.modal-content-inner {
 		background-color: white;
 		padding: 20px;
@@ -632,26 +617,7 @@ audio{
 		max-height: auto;
 	}
 	
-	#modal-content img{
-		max-height: 65%;
-		max-width: 67%;
-	}
 
-	#modal-content iframe{
-		width: 100%;
-		height: 300px;
-	}
-
-	#modal-content link{
-		max-width: 50%;
-		max-height: 50%;
-	}
-
-
-
-	#modal-content h3 {
-		font-size: 24px;
-	}
 
 
 }
