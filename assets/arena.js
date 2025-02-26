@@ -349,5 +349,5 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 
 	// Trigger every 10 seconds
 	function startGlitch() {
-		glitchTimeout = setInterval(activateGlitch, 2000000);
+		glitchTimeout = setInterval(activateGlitch, 20000);
 	}
