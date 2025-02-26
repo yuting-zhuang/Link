@@ -38,7 +38,7 @@ let generateBlockContent = (block) => {
 			`
 			<div class="modal-content-inner">
 				<h3>${block.title || 'Link'}</h3>
-					<img src="${ block.image.original.url }" style="max-width: 100%; height: auto;">
+					<img src="${ block.image.original.url }">
 					${block.description_html || ''}
 				<p><a href="${ block.source.url }">The Link ↗</a></p>
 			</div>
