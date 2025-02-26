@@ -1,11 +1,11 @@
 main{
-	margin-top: 3vh;
+	margin-top: 2vh;
 	/* margin-bottom: 7vh; */
 }
 
 p{
 	font-family: "Roboto";
-	font-size: 15px;
+	font-size: 12px;
 	margin-top: 2%;
 	margin-bottom: 2%;
 }
@@ -13,8 +13,8 @@ p{
 a{
 	font-family: "Roboto";
 	/* border: 2px solid; */
-	padding: 5px 20px;
-	font-size: 15px;
+	padding: 5px 15px;
+	font-size: 9px;
 	text-align: center;
 	/* border-radius: 3px; */
 }
@@ -34,12 +34,12 @@ a{
 }
 
 .popup {
-	border: 7px solid;
+	border: 5px solid;
 	border-color: rgb(38, 38, 197);
 	background: rgb(225, 223, 211);
 	/* padding: 20px; */
 	border-radius: 4px;
-	width: 400px;
+	max-width: 280px;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 	align-items: center;
 	justify-content: center;
@@ -54,36 +54,30 @@ a{
 .popup h1 {
 	text-align: center;
 	margin-top: 0;
-	font-size: 30px;
+	font-size: 22px;
 	color: antiquewhite;
 	background-color: rgb(38, 38, 197);
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
 
 .popup button {
 	background: rgb(225, 223, 211);
 	color: rgb(106, 104, 104);
-	border: 3px solid;
+	border: 2px solid;
 	border-color: rgb(145, 145, 145);
-	padding: 5px 20px;
+	padding: 4px 15px;
 	border-radius: 3px;
 	cursor: pointer;
 	margin-top: 10px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	font-family: "Sixtyfour";
 }
 
-.popup button:hover {
-	background: rgb(145, 145, 145);
-	color: antiquewhite;
-}
-
-
 #channel-description{
 	font-family: "Roboto";
-	font-size: 15px;
-	margin: 20px 0;
+	font-size: 10px;
+	margin: 10px 0;
 	padding: 10px;
 	border-radius: 5px;
 	width: 80%;
@@ -108,8 +102,8 @@ a{
 #channel-blocks{
 	position: relative;
 	display: grid;
-	grid-template-columns: repeat(4, 100px);
-	gap: 40px;
+	grid-template-columns: repeat(3, 100px);
+	gap: 10px;
 }
 
 /* Modal dialog style */
@@ -139,9 +133,9 @@ a{
 
 .modal-content-inner {
 	background-color: white;
-	padding: 20px;
+	padding: 15px;
 	border-radius: 4px;
-	max-width: 100%;
+	max-width: 90%;
 
 	display: flex;
 	flex-direction: column;
@@ -167,8 +161,8 @@ a{
 
 #modal-content h3{
 	margin-top: 5px;
-	margin-bottom: 18px;
-	font-size: 18px;
+	margin-bottom: 10px;
+	font-size: 16px;
 	font-family: "Sixtyfour";
 	text-align: center;
 }
@@ -176,8 +170,8 @@ a{
 /*Give each category a foreground color*/
 .green-image{
 	display: block;
-	width: 20px;
-	height: 20px;
+	width: 15px;
+	height: 15px;
 	top: 0;
 	left: 0;
 	right: 20px;
@@ -190,8 +184,8 @@ a{
 
 .red-text{
 	display: block;
-	width: 20px;
-	height: 20px;
+	width: 15px;
+	height: 15px;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -204,8 +198,8 @@ a{
 
 .blue-link{
 	display: block;
-	width: 20px;
-	height: 20px;
+	width: 15px;
+	height: 15px;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -218,8 +212,8 @@ a{
 
 .black-video{
 	display: block;
-	width: 20px;
-	height: 20px;
+	width: 15px;
+	height: 15px;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -232,8 +226,8 @@ a{
 
 .yellow-audio{
 	display: block;
-	width: 20px;
-	height: 20px;
+	width: 15px;
+	height: 15px;
 	top: 0;
 	left: 0;
 	right: 0;
